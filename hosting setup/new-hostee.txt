@@ -1,0 +1,66 @@
+{{user}} & {{site}} can be the same, and probably should.
+	However, end user won't need to enter {{site}} anywhere, so if for some reason they can't match
+	exactly it's not a big deal.
+
+Ask user for site name & {{password}}, then set {{user}} & {{site}} based on site name given.
+	If it can be exact, great, if there's weird punctuation then fix that.
+
+**********************************
+
+STEPS TO CREATE A NEW FTP USER:
+==============================
+
+sudo adduser {{user}} -g ftp-users
+	give {{password}} when prompted
+sudo mkdir -p /var/www/{{user}}/html
+sudo chmod 755 /var/www/{{user}}
+sudo chown {{user}}:ftp-users /var/www/{{user}}/html
+sudo nano /etc/ssh/sshd_config
+
+|	Match User {{user}}
+|		ForceCommand internal-sftp
+|		PasswordAuthentication yes
+|		ChrootDirectory /var/www/{{user}}
+|		PermitTunnel no
+|		AllowAgentForwarding no
+|		AllowTcpForwarding no
+|		X11Forwarding no
+
+sudo systemctl restart sshd
+
+********************************
+
+STEPS TO CREATE A NEW SITE:
+==========================
+
+sudo nano /etc/apache2/sites-available/{{site}}.conf
+
+|	<VirtualHost *:80>
+|	    ServerName {{site}}.punkfairie.net
+|	    ServerAlias www.{{site}}.punkfairie.net
+|	    ServerAdmin {{user email}}
+|	    DocumentRoot /var/www/{{user}}/html
+|	    ErrorLog ${APACHE_LOG_DIR}/error.log
+|	    CustomLog ${APACHE_LOG_DIR}/access.log combined
+|	</VirtualHost>
+
+sudo a2ensite {{site}}
+sudo apache2ctl configtest
+sudo systemctl reload apache2
+
+ - in digital ocean domain manager, create A records {{site}}.punkfairie.net and www.{{site}}.punkfairie.net
+ - point both to the punkfairie-sites droplet
+
+sudo certbot --apache
+follow prompts
+
+ ********************************
+
+ FILEZILLA SETTINGS:
+ ==================
+ protocol: SFTP
+ host: punkfairie.net
+ port: 22
+ logon type: Normal
+ user: {{user}}
+ password: {{password}}

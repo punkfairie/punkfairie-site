@@ -1,0 +1,440 @@
+/* IMPORTS -------------------------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Imprima&display=swap');
+
+@font-face {
+	font-family: basiic;
+	src: url(basiic.ttf);
+}
+
+/* GLOBAL --------------------------------------------------------------------------------------- */
+
+$accent1: #fa829e; // pink
+$accent2: #e496fd; // purple
+$fsize: 14px;
+
+html {
+	background-image: url(img/bg.png);
+	background-color: #f1c8fe;
+
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	// cursor
+	cursor: url(img/cursor.png), auto;
+	a[href] {
+		cursor: url(img/cursor.png), auto;
+	}	
+}
+
+body {
+	font-family: imprima;
+	font-size: $fsize;
+
+	width: 60%;
+	height: 70%;
+
+	display: grid;
+	gap: 10px; grid-gap: 10px;
+	grid-template-columns: 20% auto 20%;
+	grid-template-rows: 15% 85%;
+	grid-template-areas: 
+		"head head head"
+		"side main nav";
+}
+
+.divide {
+	display: block;
+	margin: 15px auto;
+	content: url(img/divide.gif);
+}
+
+/* TEXT ----------------------------------------------------------------------------------------- */
+
+a {
+	color: $accent1;
+	text-decoration: none;
+
+	&:hover { text-decoration: line-through; }
+
+	&:visited { color: $accent2; }
+}
+
+p { margin-bottom: 10px; }
+
+b { color: $accent1; }
+
+i {
+	color: $accent2;
+	font-style: italic;
+}
+
+.center-block {
+	display: block;
+	text-align: center;
+}
+
+.center { text-align: center; }
+
+img { max-width: 100%; }
+
+h3 {
+	display: block;
+	text-align: center;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+	color: $accent1;
+
+	&::before, &::after {
+		content: url(img/bow.gif);
+		margin: 0 5px;
+	}
+}
+
+ul {
+	list-style-image: url(img/bullet.gif);
+	list-style-position: inside;
+	margin-bottom: 10px;
+}
+
+/* CLOUD BOX ------------------------------------------------------------------------------------ */
+
+.u01 {
+	background:url(img/lace/f-ue.gif) repeat-x;
+	height:18px;
+	margin:0 18px 0 19px;
+}
+.s01 {
+	background:url(img/lace/f-sita.gif) repeat-x;
+	height:19px;
+	margin:0 18px 0 19px;
+}
+.box-top {
+	background-image:url(img/lace/f-kado1.gif), url(img/lace/f-kado2.gif);
+	background-position:top left, top right;
+	background-repeat:no-repeat, no-repeat;
+	height:18px
+}
+.box-center {
+	background-image:url(img/lace/f-migi.gif), url(img/lace/f-hidari.gif);
+	background-position:top right, top left;
+	background-repeat:repeat-y, repeat-y;
+}
+.box-inner {
+	background:#fff;
+	margin:0 18px 0 19px;
+}
+.box-bottom {
+	background-image:url(img/lace/f-kado3.gif), url(img/lace/f-kado4.gif);
+	background-position:top left, top right;
+	background-repeat:no-repeat, no-repeat;
+	height:19px;
+}
+
+/* EMOTES --------------------------------------------------------------------------------------- */
+
+i.angry {
+	content: url(img/emote/angry.gif);
+	margin: 0 2px;
+}
+
+i.annoyed {
+	content: url(img/emote/annoyed.gif);
+	margin: 0 2px;
+}
+
+i.love {
+	content: url(img/emote/love.gif);
+	margin: 0 2px;
+}
+
+i.sick {
+	content: url(img/emote/sick.gif);
+	margin: 0 2px;
+}
+
+i.smile {
+	content: url(img/emote/smile.gif);
+	margin: 0 2px;
+}
+
+/* HEADER --------------------------------------------------------------------------------------- */
+
+header {
+	grid-area: head;
+	text-align: right;
+
+	img { height: 100%; }
+}
+
+/* SIDEBAR -------------------------------------------------------------------------------------- */
+
+aside {
+	grid-area: side;
+
+	h2 {
+		font-size: 14px;
+		font-style: italic;
+		margin: 20px 0 5px 0;
+
+		&:first-child { margin-top: 0; }
+
+		display: flex;
+
+		.h2-line {
+			background-image: url(img/heart-right.gif);
+			background-repeat: repeat-x;
+			background-position-x: right;
+			background-position-y: center;
+			margin-left: 5px;
+			min-height: 8px;		
+			flex-grow: 1;
+		}
+	}
+
+	#side1 {
+		p {
+			margin-bottom: 0;
+
+			&::before {
+				content: url(img/point-right.gif);
+				padding-right: 5px;
+			}
+		}
+	}
+}
+
+/* SIDE2 ---------------------------------------------------------------------------------------- */
+
+#side2 { margin-top: 10px; }
+
+#rings {
+	text-align: center;
+
+	& > div { padding-top: 5px; }
+}
+
+#rings img { padding: 0 5px; }
+
+#badges { padding-bottom: 5px; }
+
+#yesterweb { margin-top: 10px; }
+
+#yesterweb, .yw-widget-text, .yw-widget, .yw-link-rand, .yw-link {
+	font-family: Imprima, serif !important;
+	font-weight: normal !important;
+
+	a { color: $accent1 !important; }
+}
+
+/* MAIN ----------------------------------------------------------------------------------------- */
+
+main {
+	grid-area: main;
+
+	.box22 { height: 90%; }
+	.box-center, .box-inner { height: 100%; }
+
+	.box-inner {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: auto 5%;
+		grid-template-areas:
+			"."
+			"footer";
+	}
+
+	#content {
+		overflow: auto;
+		padding: 0 10px;
+	}
+
+	#update-box {
+		background-image: url(img/update-box.gif);
+		width: 199px;
+		height: 194px;
+		margin: 20px auto;
+		font-size: $fsize - 2px;
+
+		#update-inner {
+			width: 145px;
+			height: 130px;
+			padding: 5px;
+			position: relative;
+			top: 35px;
+			left: 27px;
+			text-align: center;
+			overflow: auto;
+		}
+
+		h2 {
+			margin-bottom: 5px;
+			display: flex;
+
+			.h2-line:first-child {
+				background-image: url(img/heart-left.gif);
+				background-repeat: repeat-x;
+				background-position-x: left;
+				background-position-y: center;
+				margin-right: 5px;
+				min-height: 8px;
+				flex-grow: 1;
+			}
+
+			.h2-line:last-child {
+				background-image: url(img/heart-right.gif);
+				background-repeat: repeat-x;
+				background-position-x: right;
+				background-position-y: center;
+				margin-left: 5px;
+				min-height: 8px;		
+				flex-grow: 1;
+			}
+		}
+
+		p {
+			margin-bottom: 5px;
+		}
+	}
+}
+
+#cboxdiv {
+	border: 1px dotted $accent1;
+	padding: 10px;
+}
+
+#cboxmain3-3514647, #bdy, .mnbdy, #scrollmain, #mt, .hbtbl, .stxt2, #cboxform3-3514647, .fmbdy,
+.cfrm, .cfrm table, .cfrm tbody, .cfrm td, .cfrm tr, .cfrm a, #tblmid, #tblmid input, .frmtb {
+	font-family: Imprima, serif !important;
+	font-size: $fsize !important;
+}
+
+/* NAV ------------------------------------------------------------------------------------------ */
+
+nav {
+	grid-area: nav;
+	text-align: right;
+
+	h2 {
+		font-size: 14px;
+		font-style: italic;
+		margin-top: 20px;
+
+		&:first-child { margin-top: 0; }
+
+		display: flex;
+
+		.h2-line {
+			background-image: url(img/heart-left.gif);
+			background-repeat: repeat-x;
+			background-position-x: left;
+			background-position-y: center;
+			margin-right: 5px;
+			min-height: 8px;
+			flex-grow: 1;
+		}
+	}
+
+	a {
+		display: block;
+		margin: 5px 0;
+
+		&:last-child { margin-bottom: 0; }
+
+		&::after {
+			content: url(img/point-left.gif);
+			margin-left: 5px;
+		}
+
+		&.new::before {
+			content: url(img/new.gif);
+			padding-right: 5px;
+			position: relative;
+			top: 5px;
+		}
+
+		&.update::before {
+			content: url(img/update.gif);
+			padding-right: 5px;
+			position: relative;
+			top: 5px;
+		}
+	}
+}
+
+/* NAV 2 ---------------------------------------------------------------------------------------- */
+
+.box22#nav2 { margin-top: 10px; }
+
+/* FOOTER --------------------------------------------------------------------------------------- */
+
+footer {
+	text-align: center;
+	grid-area: footer;
+	font-size: 12px;
+	align-self: end;
+}
+
+/* COLLECTIONS ---------------------------------------------------------------------------------- */
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 5px; grid-gap: 5px;
+}
+
+/* HOSTING APP ---------------------------------------------------------------------------------- */
+
+form#hosting-app {
+	.form-item { margin-bottom: 10px; }
+
+	label {
+		display: block;
+		margin-bottom: 5px;
+
+		&.check { display: inline; }
+	}
+
+	input {
+		display: inline;
+		width: 50%;
+	}
+
+	input[type=checkbox] { width: unset; }
+
+	input[type=submit] {
+		width: unset;
+		display: block;
+		margin: 0 auto;
+	}
+
+	p { font-style: italic; }
+
+	p.inline {
+		display: inline;
+		font-style: normal;
+	}
+}
+
+/* UPDATE-ARCHIVE ------------------------------------------------------------------------------- */
+
+#up-archive {
+	h2 {
+		font-size: 14px;
+		font-style: italic;
+		display: block;
+		text-align: center;
+		padding-bottom: 10px;
+		text-transform: uppercase;
+		color: $accent1;
+
+		&::before, &::after {
+			content: url(img/bow.gif);
+			margin: 0 5px;
+		}
+	}
+}
