@@ -37,6 +37,6 @@
 	<img src="img/badges/linklane.png" title="Link Lane" alt="LinkLane.net">
 </a>
 
-<a href="https://nerdlistings.info/" target="_blank">
+<a href="nerdlistings.info/" target="_blank">
 	<img src="img/badges/nerdlistings.gif" title="Nerd Listings" alt="NerdListings.info">
 </a>
