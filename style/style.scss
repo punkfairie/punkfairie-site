@@ -387,6 +387,23 @@ footer {
 	gap: 5px; grid-gap: 5px;
 }
 
+/* FORMS ---------------------------------------------------------------------------------------- */
+
+form {
+    input {
+        border: 1px solid $accent1;
+        background: none;
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        letter-spacing: inherit;
+    }
+
+    .btns {
+        text-align: center;
+    }
+}
+
 /* HOSTING APP ---------------------------------------------------------------------------------- */
 
 form#hosting-app {
@@ -437,4 +454,31 @@ form#hosting-app {
 			margin: 0 5px;
 		}
 	}
+}
+
+/* HORSE ISLE CALCULATOR ------------------------------------------------------------------------ */
+
+form#hi2-calc {
+    #stats {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        margin-bottom: 20px;
+
+        text-align: center;
+
+        .stat {
+
+            label, input { width: 100%; }
+
+            label {
+                display: inline-block;
+            }
+
+            input {
+                margin: 5px 0;
+            }
+        }
+    }
 }
