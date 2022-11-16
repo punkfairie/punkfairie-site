@@ -2,9 +2,9 @@
 
 <a class="jq" id="home">index</a>
 <a class="jq" id="up-archive">update archive</a>
-<a class="jq update" id="nav-collections">collections</a>
-<a class="jq new" id="nav-hosting">hosting info</a>
-<a class="jq" id="about">about</a>
+<a class="jq" id="nav-collections">collections</a>
+<a class="jq" id="nav-hosting">hosting info</a>
+<a class="jq update" id="about">about</a>
 <a class="jq" id="manifesto">the small web</a>
 <a class="jq" id="links">links</a>
 
