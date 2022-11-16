@@ -9,7 +9,7 @@
 	form.</p>
 
 	<div class="divide"></div>
-	
+
 	<h2 class="date">16 March 2022</h2>
 	<p>Collections pages added!</p>
 

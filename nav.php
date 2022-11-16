@@ -2,7 +2,6 @@
 
 <a class="jq" id="home">index</a>
 <a class="jq" id="up-archive">update archive</a>
-<a class="jq" id="diary">diary</a>
 <a class="jq update" id="nav-collections">collections</a>
 <a class="jq new" id="nav-hosting">hosting info</a>
 <a class="jq" id="about">about</a>
@@ -15,4 +14,3 @@
 more">tutorials</a> -->
 <a href="https://epiphany.punkfairie.net" title="epiphany">petz site</a>
 <a href="https://saudade.punkfairie.net" title="saudade">petz archive</a>
-<a href="https://aeipathy.punkfairie.net" title="aeipathy">fanlistings</a>

@@ -11,7 +11,7 @@ The only thing preinstalled was Ubuntu 20.04, everything else was installed and 
 me!</p>
 
 <ul>
-	<li><b>text editor:</b> Sublime Text on Windows 10</li>
+	<li><b>text editor:</b> VSCode on Windows 11 & MacOS 11.6 Big Sur</li>
 	<li><b>languages used:</b> HTML, SCSS, PHP, and Javascript/jQuery</li>
 	<li><b>server:</b> Apache2 on Ubuntu 20.04</li>
 </ul>
@@ -24,7 +24,7 @@ enjoyed the creativity of designing a website, and figuring out how to make thin
 counters.</p>
 
 <ul>
-	<li><b>age:</b> 24</li>
-	<li><b>pronouns:</b> she/they</li>
-	<li><b>favorite languages:</b> PHP, SCSS, Ruby & Rails</li>
+	<li><b>age:</b> 25</li>
+	<li><b>pronouns:</b> she/her</li>
+	<li><b>favorite languages:</b> PHP, SCSS</li>
 </ul>
