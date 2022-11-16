@@ -4,7 +4,7 @@ directory for my other sites! I'm still building everything, so be patient while
 <div id="update-box">
 	<div id="update-inner">
         <h2 class="date">15 November 2022</h2>
-        <p>Updated about.</p>
+        <p>Updated about, added HI2 stat calc.</p>
 
 		<h2 class="date">25 March 2022</h2>
 		<p>Moved fanlisting stuff to its own site.</p>
