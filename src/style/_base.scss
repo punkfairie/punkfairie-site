@@ -5,12 +5,13 @@
 @use 'theme';
 
 html {
+  overflow: hidden;
   background-image: theme.$gradient;
   min-block-size: 100vb;
   min-inline-size: 100vi;
 }
 
 body {
-  font-size: theme.$fontSize-0;
   font-family: theme.$fontFamily--body;
+  font-size: theme.$fontSize-0;
 }

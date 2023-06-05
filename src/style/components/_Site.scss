@@ -1,0 +1,54 @@
+@use 'sass:color';
+@use '../theme';
+
+%_SiteContent {
+  $_SiteContent-backgroundColor: color.adjust(theme.$neutral-50, $alpha: -0.5);
+
+  margin: theme.$spacer-3xs;
+  background-color: $_SiteContent-backgroundColor;
+}
+
+.Site {
+  display: grid;
+  grid-template:
+    'Site-info   Site-content Site-nav'   2fr
+    'Site-social Site-content Site-nav'   4fr
+    'Site-title  Site-title   Site-title' 2fr
+    / 1fr       3fr         1fr;
+  inline-size: 100%;
+  block-size: 100%;
+  padding: theme.$spacer-4xl;
+
+  &-title {
+    grid-area: Site-title;
+    justify-self: end;
+    padding-inline-end: theme.$spacer-s;
+    font-family: theme.$fontFamily--display;
+    font-size: theme.$fontSize-5;
+    font-weight: normal;
+  }
+
+  &-nav {
+    @extend %_SiteContent;
+
+    grid-area: Site-nav;
+  }
+
+  &-content {
+    @extend %_SiteContent;
+
+    grid-area: Site-content;
+  }
+
+  &-info {
+    @extend %_SiteContent;
+
+    grid-area: Site-info;
+  }
+
+  &-social {
+    @extend %_SiteContent;
+
+    grid-area: Site-social;
+  }
+}
