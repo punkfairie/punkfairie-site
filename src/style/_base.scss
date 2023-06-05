@@ -5,8 +5,12 @@
 @use 'theme';
 
 html {
-  background-color: #fff;
-  background-image: theme.$c-gradient;
-  min-height: 100vh;
-  min-width: 100vw;
+  background-image: theme.$gradient;
+  min-block-size: 100vb;
+  min-inline-size: 100vi;
+}
+
+body {
+  font-size: theme.$fontSize-0;
+  font-family: theme.$fontFamily--body;
 }
