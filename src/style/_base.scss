@@ -1,0 +1,12 @@
+/**
+ * Global styles. This is the ONLY sheet that is allowed plain HTML tags.
+ */
+
+@use 'theme';
+
+html {
+  background-color: #fff;
+  background-image: theme.$c-gradient;
+  min-height: 100vh;
+  min-width: 100vw;
+}
