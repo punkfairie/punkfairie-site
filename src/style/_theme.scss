@@ -59,9 +59,10 @@ $fontSize-6: clamp(2.24rem, calc(1.86rem + 1.91vw), 3.34rem);
 
 /**
  * Fluid spacing scale
- * @link https://utopia.fyi/space/calculator?c=320,12,1.2,1240,14,1.25,6,0,&s=0.75|0.5|0.25,1.5|2|3|4|6|8,s-l&g=s,l,xl,12
+ * @link https://utopia.fyi/space/calculator?c=320,12,1.2,1240,14,1.25,6,0,&s=0.75|0.5|0.25|0.15,1.5|2|3|4|6|12,s-l&g=s,l,xl,12
  */
 
+$spacer-4xs: clamp(0.13rem, calc(0.13rem + 0.00vw), 0.13rem);
 $spacer-3xs: clamp(0.19rem, calc(0.17rem + 0.11vw), 0.25rem);
 $spacer-2xs: clamp(0.38rem, calc(0.35rem + 0.11vw), 0.44rem);
 $spacer-xs: clamp(0.56rem, calc(0.52rem + 0.22vw), 0.69rem);
@@ -74,6 +75,7 @@ $spacer-3xl: clamp(4.50rem, calc(4.24rem + 1.30vw), 5.25rem);
 $spacer-4xl: clamp(9.00rem, calc(8.48rem + 2.61vw), 10.50rem);
 
 /* One-up pairs */
+$spacer-4xs-3xs: clamp(0.13rem, calc(0.08rem + 0.22vw), 0.25rem);
 $spacer-3xs-2xs: clamp(0.19rem, calc(0.10rem + 0.43vw), 0.44rem);
 $spacer-2xs-xs: clamp(0.38rem, calc(0.27rem + 0.54vw), 0.69rem);
 $spacer-xs-s: clamp(0.56rem, calc(0.45rem + 0.54vw), 0.88rem);

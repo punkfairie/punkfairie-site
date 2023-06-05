@@ -16,6 +16,12 @@
       text-decoration: wavy underline;
     }
   }
+
+  &-separator {
+    background-image: theme.$gradient;
+    border: none;
+    block-size: theme.$spacer-4xs;
+  }
 }
 
 @include mixins.rainbowify-text('.Nav-link', 'color');
