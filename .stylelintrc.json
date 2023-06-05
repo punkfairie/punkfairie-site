@@ -1,0 +1,65 @@
+{
+    "extends": [
+        "stylelint-config-standard-scss",
+        "stylelint-config-recess-order",
+        "@ronilaukkarinen/stylelint-a11y/recommended"
+    ],
+    "plugins": [
+        "stylelint-rem-over-px",
+        "stylelint-plugin-defensive-css",
+        "stylelint-plugin-logical-css",
+        "stylelint-declaration-strict-value"
+    ],
+    "rules": {
+        "selector-class-pattern": null,
+        "value-keyword-case": null,
+        "scss/dollar-variable-pattern": null,
+        "rem-over-px/rem-over-px": [
+            true,
+            {
+                "ignore": [
+                    "box-shadow",
+                    "text-shadow",
+                    "border-radius"
+                ]
+            }
+        ],
+        "plugin/use-defensive-css": [
+            true,
+            {
+                "custom-property-fallbacks": false
+            }
+        ],
+        "plugin/use-logical-properties-and-values": [
+            true,
+            {}
+        ],
+        "plugin/use-logical-units": [
+            true,
+            {}
+        ],
+        "scale-unlimited/declaration-strict-value": [
+            [
+                "/color/",
+                "/size/",
+                "/margin/",
+                "/padding/"
+            ],
+            {
+                "ignoreValues": [
+                    "currentColor",
+                    "inherit",
+                    "transparent",
+                    "0",
+                    "100vi",
+                    "100vb",
+                    "100%"
+                ],
+                "expandShorthand": true,
+                "recurseLonghand": true,
+                "message": "Custom expected ${types} for \"${value}\" of \"${property}\"",
+                "disableFix": true
+            }
+        ]
+    }
+}
