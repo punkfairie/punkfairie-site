@@ -1,9 +1,11 @@
 @use 'sass:color';
 @use '../theme';
+@use '../mixins';
 
 %_SiteContent {
   $_SiteContent-backgroundColor: color.adjust(theme.$neutral-50, $alpha: -0.5);
 
+  padding: theme.$spacer-s;
   margin: theme.$spacer-3xs;
   background-color: $_SiteContent-backgroundColor;
 }
@@ -24,7 +26,7 @@
     justify-self: end;
     padding-inline-end: theme.$spacer-s;
     font-family: theme.$fontFamily--display;
-    font-size: theme.$fontSize-5;
+    font-size: theme.$fontSize-6;
     font-weight: normal;
   }
 
@@ -36,8 +38,10 @@
 
   &-content {
     @extend %_SiteContent;
+    @include mixins.flow;
 
     grid-area: Site-content;
+    padding: theme.$spacer-m;
   }
 
   &-info {

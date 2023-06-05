@@ -1,0 +1,20 @@
+@use 'sass:list';
+@use 'theme';
+
+@mixin flow($space: 1em) {
+  & > * + * {
+    margin-block-start: $space;
+  }
+}
+
+@mixin rainbowify-text($elem, $props...) {
+  $colors-length: list.length(theme.$text-colors);
+
+  @for $i from 1 through $colors-length {
+    :nth-child(#{$colors-length}n + #{$i} of #{$elem}) {
+      @each $prop in $props {
+        #{$prop}: list.nth(theme.$text-colors, $i);
+      }
+    }
+  }
+}
