@@ -20,27 +20,29 @@
 
 <nav class="Site-nav Nav" x-data :style="$store['subNav'].open ? '--Site-nav-gridArea: Site-nav;' : ''">
     <a href="/" class="Nav-link">index</a>
-    <button class="Nav-link" @click="$store['subNav'].toggle('collections')" aria-controls="collections-submenu"
-            aria-expanded="false">
-        collections
-    </button>
-    <a href="/about/" class="Nav-link">about</a>
-    <a href="/manifesto/" class="Nav-link">manifesto</a>
-    <a href="/diary/" class="Nav-link">diary</a>
-    <a href="/links/" class="Nav-link">links</a>
+<button class="Nav-link" @click="$store['subNav'].toggle('collections')" aria-controls="collections-submenu"
+        aria-expanded="false">
+    collections
+</button>
+<a href="/about/" class="Nav-link">about</a>
+<a href="/manifesto/" class="Nav-link">manifesto</a>
+<a href="/diary/" class="Nav-link">diary</a>
+<a href="/links/" class="Nav-link">links</a>
 
-    <hr class="Nav-separator">
+<hr class="Nav-separator">
 
-    <a href="https://epiphany.punkfairie.net" target="_blank" class="Nav-link">epiphany</a>
-    <a href="https://saudade.punkfairie.net" target="_blank" class="Nav-link">petz archive</a>
+<a href="https://epiphany.punkfairie.net" target="_blank" class="Nav-link">epiphany</a>
+<a href="https://saudade.punkfairie.net" target="_blank" class="Nav-link">petz archive</a>
+
 </nav>
 
 <nav class="Site-subNav Nav" x-data x-show="$store['subNav'].current === 'collections'" id="collections-submenu">
     <p class="Nav-caption"><i>Warning: flashing gifs; very image heavy.</i></p>
 
-    <a href="/collections/buttons/" class="Nav-link">buttons</a>
-    <a href="/collections/blinkies/" class="Nav-link">blinkies</a>
-    <a href="/collections/stamps/" class="Nav-link">stamps</a>
+<a href="/collections/buttons/" class="Nav-link">buttons</a>
+<a href="/collections/blinkies/" class="Nav-link">blinkies</a>
+<a href="/collections/stamps/" class="Nav-link">stamps</a>
+
 </nav>
 
 <main class="Site-content">
@@ -53,11 +55,11 @@
 </main>
 
 <aside class="Site-info">
-
+    
 </aside>
 
 <aside class="Site-social">
-
+    
 </aside>
 
 <!--suppress HtmlUnknownTarget -->
