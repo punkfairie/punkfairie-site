@@ -1,5 +1,5 @@
 /**
- * Global styles. This is the ONLY sheet that is allowed plain HTML tags.
+ * Global styles. This is the ONLY sheet that is allowed plain HTML tags for anything other than margin.
  */
 
 @use 'theme';
@@ -19,5 +19,19 @@ body {
   letter-spacing: theme.$letterSpacing;
 }
 
-@include mixins.rainbowify-text('i', 'color');
-@include mixins.rainbowify-text('b', 'color');
+b {
+  font-weight: normal;
+}
+
+@include mixins.rainbowify-text(i, color);
+@include mixins.rainbowify-text(b, color);
+
+hr {
+  background-image: theme.$gradient;
+  border: none;
+  block-size: theme.$spacer-4xs;
+}
+
+a {
+  @include mixins.link-style;
+}

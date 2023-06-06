@@ -18,3 +18,12 @@
     }
   }
 }
+
+@mixin link-style() {
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:hover, &:focus {
+    text-decoration: wavy underline;
+  }
+}
