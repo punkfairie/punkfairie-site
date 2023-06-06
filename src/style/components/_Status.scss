@@ -1,0 +1,20 @@
+@use '../theme';
+
+%_Status--before {
+  display: inline-block;
+  margin-inline-end: theme.$spacer-2xs;
+  vertical-align: middle;
+  block-size: 18px; // stylelint-disable-line rem-over-px/rem-over-px, scale-unlimited/declaration-strict-value
+}
+
+.Status--new::before {
+  @extend %_Status--before;
+
+  content: url('/style/assets/neonlove-lani-icon-pinknew.gif');
+}
+
+.Status--up::before {
+  @extend %_Status--before;
+  
+  content: url('/style/assets/neonlove-lani-icon-pinkup.gif');
+}
