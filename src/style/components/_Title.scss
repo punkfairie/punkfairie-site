@@ -1,10 +1,11 @@
 @use '../theme';
 
-@mixin Title() {
+@mixin Title($size) {
   font-weight: normal;
   text-transform: uppercase;
 
   &::before, &::after {
+    font-size: $size;
     content: '🌈';
   }
 
@@ -20,19 +21,19 @@
 }
 
 .Title--sizeH2 {
-  @include Title;
+  @include Title(theme.$fontSize-3);
 
   font-size: theme.$fontSize-4;
 }
 
 .Title--sizeH3 {
-  @include Title;
+  @include Title(theme.$fontSize-2);
 
   font-size: theme.$fontSize-3;
 }
 
 .Title--sizeH4 {
-  @include Title;
+  @include Title(theme.$fontSize-1);
 
   font-size: theme.$fontSize-2;
 }

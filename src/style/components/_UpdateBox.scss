@@ -3,6 +3,7 @@
 
 .UpdateBox {
   @include mixins.gradient-border(theme.$spacer-2xs);
+  @include mixins.flow(theme.$spacer-2xs);
 
   padding: theme.$spacer-s;
   margin-inline-start: auto;
