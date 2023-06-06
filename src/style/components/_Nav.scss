@@ -2,6 +2,8 @@
 @use '../mixins';
 
 .Nav {
+  text-align: end;
+
   &-caption {
     margin-block-end: theme.$spacer-xs;
   }
@@ -11,11 +13,13 @@
     padding: 0;
     margin: 0;
     color: inherit;
+    text-align: inherit;
     text-decoration: underline;
     letter-spacing: inherit;
     cursor: pointer;
     background-color: transparent;
     border: none;
+    inline-size: 100%;
 
     &:hover, &:focus {
       text-decoration: wavy underline;
@@ -29,4 +33,4 @@
   }
 }
 
-@include mixins.rainbowify-text('.Nav-link', 'color');
+@include mixins.rainbowify-text('.Nav-link', color);

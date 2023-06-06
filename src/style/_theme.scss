@@ -38,7 +38,35 @@ $neutral-900: rgb(24 24 27);
 $gradient: linear-gradient(90deg, $red-400 0%, $orange-400 17%, $yellow-400 33%, $green-400 50%, $blue-400 67%, $purple-400 83%, $pink-400 100%);
 
 /* text color iterator */
-$text-colors: $red-600, $orange-600, $yellow-600, $green-600, $blue-600, $purple-600, $pink-600;
+$text-colors: [
+  $red-600,
+  $orange-600,
+  $yellow-600,
+  $green-600,
+  $blue-600,
+  $purple-600,
+  $pink-600
+];
+
+/* bullet image iterator */
+$bullet-images-point-left: [
+  url('/style/assets/ha01-icon-arrow.gif'),
+  url('/style/assets/ha02-icon-arrow.gif'),
+  url('/style/assets/ha03-icon-arrow.gif'),
+  url('/style/assets/ha05-icon-arrow.gif'),
+  url('/style/assets/ha06-icon-arrow.gif'),
+  url('/style/assets/ha08-icon-arrow.gif'),
+  url('/style/assets/ha10-icon-arrow.gif')
+];
+$bullet-images-point-right: [
+  url('style/assets/hb01-icon-arrow.gif'),
+  url('style/assets/hb02-icon-arrow.gif'),
+  url('style/assets/hb03-icon-arrow.gif'),
+  url('style/assets/hb05-icon-arrow.gif'),
+  url('style/assets/hb06-icon-arrow.gif'),
+  url('style/assets/hb08-icon-arrow.gif'),
+  url('style/assets/hb10-icon-arrow.gif')
+];
 
 /* typography */
 $fontFamily--display: 'Bungee Shade', display;

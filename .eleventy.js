@@ -10,6 +10,9 @@ module.exports = function (eleventyConfig) {
         ]),
     })
 
+    // Copy CSS assets
+    eleventyConfig.addPassthroughCopy('src/style/assets')
+
     // Process JS
     eleventyConfig.addTemplateFormats('js')
     eleventyConfig.addExtension('js', {
