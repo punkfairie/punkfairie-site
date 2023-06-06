@@ -13,10 +13,11 @@
 .Site {
   display: grid;
   grid-template:
-    'Site-info   Site-content Site-nav'   2fr
-    'Site-social Site-content Site-nav'   4fr
-    'Site-title  Site-title   Site-title' 2fr
-    / 1fr       3fr         1fr;
+    'Site-info   Site-content Site-nav'    2fr
+    'Site-social Site-content Site-nav'    2fr
+    'Site-social Site-content Site-subNav' 2fr
+    'Site-title  Site-title   Site-title'  2fr
+    / 1fr        3fr          1fr;
   inline-size: 100%;
   block-size: 100%;
   padding: theme.$spacer-4xl;
@@ -33,7 +34,16 @@
   &-nav {
     @extend %_SiteContent;
 
-    grid-area: Site-nav;
+    --Site-nav-gridArea: Site-nav / Site-nav / Site-subNav / Site-nav;
+
+    grid-area: var(--Site-nav-gridArea);
+  }
+
+  &-subNav {
+    @extend %_SiteContent;
+
+    display: none;
+    grid-area: Site-subNav;
   }
 
   &-content {
