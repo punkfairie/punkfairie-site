@@ -1,4 +1,5 @@
 @use 'sass:list';
+@use 'sass:math';
 @use 'theme';
 
 @mixin flow($space: 1em) {
@@ -26,4 +27,12 @@
   &:hover, &:focus {
     text-decoration: wavy underline;
   }
+}
+
+// noinspection CssReplaceWithShorthandSafely
+@mixin gradient-border($width) {
+  border: $width solid;
+  border-width: math.div($width, 2);
+  border-image-source: theme.$gradient;
+  border-image-slice: 1;
 }

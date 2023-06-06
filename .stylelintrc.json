@@ -16,6 +16,7 @@
     "custom-property-pattern": null,
     "scss/dollar-variable-pattern": null,
     "scss/percent-placeholder-pattern": null,
+    "scss/at-mixin-pattern": null,
     "rem-over-px/rem-over-px": [
       true,
       {
@@ -56,7 +57,8 @@
           "0",
           "100vi",
           "100vb",
-          "100%"
+          "100%",
+          "auto"
         ],
         "expandShorthand": true,
         "recurseLonghand": true,

@@ -1,0 +1,38 @@
+@use '../theme';
+
+@mixin Title() {
+  font-weight: normal;
+  text-transform: uppercase;
+
+  &::before, &::after {
+    content: '🌈';
+  }
+
+  &::before {
+    margin-inline-end: theme.$spacer-2xs;
+  }
+
+  &::after {
+    display: inline-block;
+    margin-inline-start: theme.$spacer-2xs;
+    transform: rotate(90deg);
+  }
+}
+
+.Title--sizeH2 {
+  @include Title;
+
+  font-size: theme.$fontSize-4;
+}
+
+.Title--sizeH3 {
+  @include Title;
+
+  font-size: theme.$fontSize-3;
+}
+
+.Title--sizeH4 {
+  @include Title;
+
+  font-size: theme.$fontSize-2;
+}
