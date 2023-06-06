@@ -5,8 +5,9 @@ Alpine.store('subNav', {
     current: null,
 
     toggle(menu) {
-        this.open = !this.open
-        this.current = this.open ? menu : null
+        this.current = !this.current ? menu : null
+        this.open = !!this.current
+        console.log(this.current, this.open)
     },
 })
 

@@ -2,6 +2,10 @@
 @use '../mixins';
 
 .Nav {
+  &-caption {
+    margin-block-end: theme.$spacer-xs;
+  }
+
   &-link {
     display: block;
     padding: 0;
