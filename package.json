@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@11ty/eleventy-plugin-vite": "^4.0.0",
-    "eleventy-sass": "^2.2.1"
+    "eleventy-sass": "^2.2.1",
+    "terser": "^5.17.7"
   }
 }
