@@ -48,12 +48,12 @@
 
 </aside>
 
-{% set js %}
-{% include 'main.js' %}
-{% endset %}
+{% capture js %}
+    {% include 'main.js' %}
+{% endcapture %}
 
 <script>
-    {{ js | jsMin | safe }}
+    {{ js | jsMin }}
 </script>
 </body>
 </html>
