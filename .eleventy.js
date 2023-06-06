@@ -1,24 +1,37 @@
-const {minify} = require('terser');
+const {minify} = require('terser')
+const esbuild = require('esbuild')
 
 module.exports = function (eleventyConfig) {
     // Process SCSS
     eleventyConfig.addPlugin(require('eleventy-sass'), {
         postcss: require('postcss')([
             require('postcss-preset-env'),
-            require('cssnano')
-        ])
-    });
+            require('cssnano'),
+        ]),
+    })
 
-    // Minify and inline JS
-    eleventyConfig.addLiquidFilter('jsMin', async function (code, callback) {
-        try {
-            const minified = await minify(code);
-            callback(null, minified.code);
-        } catch (e) {
-            console.error(`Terser error: ${e}`);
-            callback(null, code);
-        }
-    });
+    // Process JS
+    eleventyConfig.addTemplateFormats('js')
+    eleventyConfig.addExtension('js', {
+        outputFileExtension: 'js',
+        compile: async (content, path) => {
+            if (path !== './src/js/main.js') {
+                return
+            }
 
-    return {dir: {input: 'src', output: 'dist'}};
+            return async () => {
+                const output = await esbuild.build({
+                    target: 'es2020',
+                    entryPoints: [path],
+                    minify: true,
+                    bundle: true,
+                    write: false,
+                })
+
+                return output.outputFiles[0].text
+            }
+        },
+    })
+
+    return {dir: {input: 'src', output: 'dist'}}
 }
