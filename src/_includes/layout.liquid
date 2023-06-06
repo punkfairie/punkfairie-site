@@ -18,9 +18,9 @@
 
 <h1 class="Site-title">punkfairie.net</h1>
 
-<nav class="Site-nav Nav">
+<nav class="Site-nav Nav" x-data :style="$store['subNav'].open ? '--Site-nav-gridArea: Site-nav;' : ''">
     <a href="/" class="Nav-link">index</a>
-    <button class="Nav-link">collections</button>
+    <button class="Nav-link" @click="$store['subNav'].toggle('collections')">collections</button>
     <a href="/about/" class="Nav-link">about</a>
     <a href="/manifesto/" class="Nav-link">manifesto</a>
     <a href="/diary/" class="Nav-link">diary</a>
@@ -32,7 +32,7 @@
     <a href="https://saudade.punkfairie.net" target="_blank" class="Nav-link">petz archive</a>
 </nav>
 
-<nav class="Site-subNav Nav">
+<nav class="Site-subNav Nav" x-data x-show="$store['subNav'].open">
 
 </nav>
 
@@ -48,12 +48,7 @@
 
 </aside>
 
-{% capture js %}
-    {% include 'main.js' %}
-{% endcapture %}
-
-<script>
-    {{ js | jsMin }}
-</script>
+<!--suppress HtmlUnknownTarget -->
+<script src="/js/main.js"></script>
 </body>
 </html>
