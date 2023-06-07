@@ -1,4 +1,3 @@
-const {minify} = require('terser')
 const esbuild = require('esbuild')
 
 module.exports = function (eleventyConfig) {
@@ -12,6 +11,9 @@ module.exports = function (eleventyConfig) {
 
     // Copy CSS assets
     eleventyConfig.addPassthroughCopy('src/style/assets')
+
+    // Copy collections
+    eleventyConfig.addPassthroughCopy('src/collections')
 
     // Process JS
     eleventyConfig.addTemplateFormats('js')

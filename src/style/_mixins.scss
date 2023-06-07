@@ -30,7 +30,7 @@
 }
 
 // noinspection CssReplaceWithShorthandSafely
-@mixin gradient-border($width) {
+@mixin gradient-border($width: theme.$spacer-2xs) {
   border: $width solid;
   border-width: math.div($width, 2);
   border-image-source: theme.$gradient;

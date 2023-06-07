@@ -1,0 +1,12 @@
+@use '../theme';
+@use '../mixins';
+
+.Cbox {
+  @include mixins.gradient-border;
+
+  position: relative;
+  margin: theme.$spacer-m auto 0;
+  inline-size: theme.$spacer-5xl;
+  font-size: 0;
+  line-height: 0;
+}
