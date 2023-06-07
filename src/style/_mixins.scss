@@ -1,5 +1,6 @@
 @use 'sass:list';
 @use 'sass:math';
+@use 'sass:selector';
 @use 'theme';
 
 @mixin flow($space: 1em) {
@@ -12,9 +13,13 @@
   $colors-length: list.length(theme.$text-colors);
 
   @for $i from 1 through $colors-length {
-    :nth-child(#{$colors-length}n + #{$i} of #{$elem}) {
+    :nth-child(#{$colors-length}n + #{$i} of #{selector.parse($elem)}) {
       @each $prop in $props {
-        #{$prop}: list.nth(theme.$text-colors, $i);
+        @if $prop == --rainbow-text {
+          --rainbow-text: #{list.nth(theme.$text-colors, $i)};
+        } @else {
+          #{$prop}: var(--rainbow-text, #{list.nth(theme.$text-colors, $i)});
+        }
       }
     }
   }
