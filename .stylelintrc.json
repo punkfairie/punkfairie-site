@@ -47,7 +47,8 @@
         "/size/",
         "/margin/",
         "/padding/",
-        "/background/"
+        "background-color",
+        "background-image"
       ],
       {
         "ignoreValues": [
