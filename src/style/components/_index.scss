@@ -1,8 +1,14 @@
-@forward 'Site';
-@forward 'Nav';
-@forward 'Info';
-@forward 'Social';
-@forward 'Status';
-@forward 'UpdateBox';
-@forward 'Title';
-@forward 'Cbox';
+/* layout */
+@forward 'layout/Site';
+@forward 'layout/Nav';
+@forward 'layout/Info';
+@forward 'layout/Social';
+@forward 'layout/Status';
+
+/* base elements */
+@forward 'base/Title';
+@forward 'base/Link';
+
+/* page-specific components */
+@forward 'index/UpdateBox';
+@forward 'index/Cbox';

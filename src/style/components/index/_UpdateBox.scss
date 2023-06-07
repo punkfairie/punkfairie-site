@@ -1,5 +1,5 @@
-@use '../mixins';
-@use '../theme';
+@use '../../mixins';
+@use '../../theme';
 
 .UpdateBox {
   @include mixins.gradient-border;
