@@ -2,5 +2,6 @@
 
 .Gallery {
   display: flex;
+  flex-wrap: wrap;
   gap: theme.$spacer-2xs;
 }
