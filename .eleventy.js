@@ -13,8 +13,8 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('src/style/assets')
 
     // Copy collections & links
-    eleventyConfig.addPassthroughCopy('src/collections')
-    eleventyConfig.addPassthroughCopy('src/links')
+    eleventyConfig.addPassthroughCopy('src/collections/images')
+    eleventyConfig.addPassthroughCopy('src/images')
 
     // Process JS
     eleventyConfig.addTemplateFormats('js')
