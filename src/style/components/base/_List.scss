@@ -1,7 +1,6 @@
 @use '../../mixins';
-
-.List {
-
-}
-
 @include mixins.rainbowify-text('.List-item', --rainbow-text);
+
+.List-item::marker {
+  color: var(--rainbow-text);
+}
