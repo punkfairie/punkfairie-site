@@ -10,6 +10,9 @@
 @forward 'base/Link';
 @forward 'base/List';
 
+/* global components */
+@forward 'Gallery';
+
 /* page-specific components */
 @forward 'index/UpdateBox';
 @forward 'index/Cbox';

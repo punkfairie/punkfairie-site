@@ -1,0 +1,6 @@
+@use '../theme';
+
+.Gallery {
+  display: flex;
+  gap: theme.$spacer-2xs;
+}
