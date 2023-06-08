@@ -68,6 +68,6 @@ module.exports = async function () {
     }
 
     collections.credits = credits
-    console.log(collections.buttons)
+    
     return collections
 }

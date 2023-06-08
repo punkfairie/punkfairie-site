@@ -5,7 +5,10 @@ layout: layout.liquid
     {% for source in buttons %}
         {% for button in source[1] %}
             <a href="{{ credits[source[0]] }}" target="_blank">
-                <img src="/collections/images/buttons/{{ source[0] }}/{{ button }}" alt="{{ source[0] }}">
+                <img
+                        src="/collections/images/buttons/{{ source[0] }}/{{ button }}"
+                        alt="{{ button | toAlt }}"
+                >
             </a>
         {% endfor %}
     {% endfor %}
