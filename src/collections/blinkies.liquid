@@ -1,0 +1,15 @@
+---
+layout: layout.liquid
+---
+<div class="Gallery">
+    {% for source in blinkies %}
+        {% for blinkie in source[1] %}
+            <a href="{{ credits[source[0]] }}" target="_blank">
+                <img
+                        src="/collections/images/blinkies/{{ source[0] }}/{{ blinkie }}"
+                        alt="{{ blinkie | toAlt }}"
+                >
+            </a>
+        {% endfor %}
+    {% endfor %}
+</div>

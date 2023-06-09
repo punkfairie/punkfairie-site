@@ -1,0 +1,15 @@
+---
+layout: layout.liquid
+---
+<div class="Gallery">
+    {% for source in stamps %}
+        {% for stamp in source[1] %}
+            <a href="{{ credits[source[0]] }}" target="_blank">
+                <img
+                        src="/collections/images/stamps/{{ source[0] }}/{{ stamp }}"
+                        alt="{{ stamp | toAlt }}"
+                >
+            </a>
+        {% endfor %}
+    {% endfor %}
+</div>

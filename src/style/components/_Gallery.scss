@@ -4,4 +4,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: theme.$spacer-2xs;
+  align-items: center;
+  justify-content: center;
 }
