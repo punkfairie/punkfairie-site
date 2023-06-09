@@ -1,0 +1,7 @@
+{
+  "layout": "layout_diary.liquid",
+  "permalink": "/diary/{{ page.inputPath | datePathSlugify }}/{{ title | slugify }}/",
+  "tags": [
+    "posts"
+  ]
+}

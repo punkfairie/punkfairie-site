@@ -1,0 +1,13 @@
+---
+layout: layout.liquid
+---
+
+<ul class="List">
+    {% for post in collections.posts reversed %}
+        <li class="List-item">
+            <a href="{{ post.url }}" class="Link">{{ post.data.title }}</a>
+            &mdash;
+            {{ post.page.date | date: "%d %B %Y" }}
+        </li>
+    {% endfor %}
+</ul>

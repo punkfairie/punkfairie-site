@@ -3,6 +3,7 @@
 @mixin Title($size) {
   font-weight: normal;
   text-transform: uppercase;
+  text-align: center;
 
   &::before, &::after {
     font-size: $size;

@@ -45,5 +45,12 @@ module.exports = function (eleventyConfig) {
         return basename[0].replace(/-/g, ' ')
     })
 
+    // Convert diary date path to slug
+    eleventyConfig.addFilter('datePathSlugify', (path) => {
+        const folders = path.split('/')
+        const file = folders.pop().split('.')
+        return `${folders[3]}/${folders[4]}/${file[0]}`
+    })
+
     return {dir: {input: 'src', output: 'dist'}}
 }
