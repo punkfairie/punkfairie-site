@@ -1,3 +1,7 @@
+@use 'mixins';
+
 .u-textCenter {
   text-align: center;
 }
+
+@include mixins.rainbowify-text('.u-rainbowifyChildren', --rainbow-text);
