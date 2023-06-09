@@ -52,5 +52,8 @@ module.exports = function (eleventyConfig) {
         return `${folders[3]}/${folders[4]}/${file[0]}`
     })
 
+    // RSS
+    eleventyConfig.addPlugin(require('@11ty/eleventy-plugin-rss'))
+
     return {dir: {input: 'src', output: 'dist'}}
 }
