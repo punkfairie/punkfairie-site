@@ -42,7 +42,7 @@ module.exports = function (eleventyConfig) {
     // Convert img filename to alt text
     eleventyConfig.addFilter('toAlt', (text) => {
         const basename = text.split('.')
-        return basename[0].replace(/_/g, ' ')
+        return basename[0].replace(/-/g, ' ')
     })
 
     return {dir: {input: 'src', output: 'dist'}}
