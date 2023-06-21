@@ -4,4 +4,8 @@
   text-align: center;
 }
 
+.flow {
+  @include mixins.flow;
+}
+
 @include mixins.rainbowify-text('.u-rainbowifyChildren', --rainbow-text);

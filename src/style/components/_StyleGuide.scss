@@ -1,0 +1,52 @@
+@use '../theme';
+@use '../mixins';
+
+.StyleGuide-colors {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+%StyleGuide-color {
+  padding: theme.$spacer-2xs theme.$spacer-xs;
+  text-align: center;
+  width: 50%;
+}
+
+.StyleGuide-color--heading {
+  @extend %StyleGuide-color;
+
+  font-style: italic;
+}
+
+@each $name, $color in theme.$colors {
+  .StyleGuide-color--#{$name} {
+    @extend %StyleGuide-color;
+
+    @if ($name == "neutral900") {
+      color: theme.$neutral-50;
+    }
+
+    @if ($name == 'gradient') {
+      background-image: $color;
+      width: 100%;
+    } @else {
+      background-color: $color;
+    }
+  }
+}
+
+.StyleGuide-rainbowText {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.StyleGuide-italics, .StyleGuide-bold, .StyleGuide-links {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.StyleGuide-rainbowBorder {
+  @include mixins.gradient-border;
+
+  text-align: center;
+}

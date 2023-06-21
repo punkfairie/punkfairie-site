@@ -38,3 +38,9 @@
 
   font-size: theme.$fontSize-2;
 }
+
+.Title--sizeH5 {
+  @include Title(theme.$fontSize-0);
+
+  font-size: theme.$fontSize-1;
+}

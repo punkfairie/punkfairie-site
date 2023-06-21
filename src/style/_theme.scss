@@ -37,6 +37,27 @@ $neutral-900: rgb(24 24 27);
 /* gradient */
 $gradient: linear-gradient(90deg, $red-400 0%, $orange-400 17%, $yellow-400 33%, $green-400 50%, $blue-400 67%, $purple-400 83%, $pink-400 100%);
 
+/* color iterator (mostly used for styleguide classes) */
+$colors: (
+  "red400": $red-400,
+  "red600": $red-600,
+  "orange400": $orange-400,
+  "orange600": $orange-600,
+  "yellow400": $yellow-400,
+  "yellow600": $yellow-600,
+  "green400": $green-400,
+  "green600": $green-600,
+  "blue400": $blue-400,
+  "blue600": $blue-600,
+  "purple400": $purple-400,
+  "purple600": $purple-600,
+  "pink400": $pink-400,
+  "pink600": $pink-600,
+  "neutral50": $neutral-50,
+  "neutral900": $neutral-900,
+  "gradient": $gradient,
+);
+
 /* text color iterator */
 $text-colors: [
   $red-600,
@@ -49,6 +70,7 @@ $text-colors: [
 ];
 
 /* bullet image iterator */
+//noinspection CssUnknownTarget
 $bullet-images-point-left: [
   url('/style/assets/ha01-icon-arrow.gif'),
   url('/style/assets/ha02-icon-arrow.gif'),
@@ -58,6 +80,7 @@ $bullet-images-point-left: [
   url('/style/assets/ha08-icon-arrow.gif'),
   url('/style/assets/ha10-icon-arrow.gif')
 ];
+//noinspection CssUnknownTarget
 $bullet-images-point-right: [
   url('style/assets/hb01-icon-arrow.gif'),
   url('style/assets/hb02-icon-arrow.gif'),
