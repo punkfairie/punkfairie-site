@@ -30,6 +30,7 @@
   "dependencies": {
     "@11ty/eleventy-plugin-vite": "^4.0.0",
     "alpinejs": "^3.12.2",
+    "eleventy-plugin-automatic-noopener": "^2.0.2",
     "eleventy-sass": "^2.2.1",
     "esbuild": "0.17.19"
   }
