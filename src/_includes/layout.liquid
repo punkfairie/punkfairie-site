@@ -1,41 +1,48 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{% if title %}{{ title }} | {% endif %}punkfairie.net</title>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{% if title %}{{ title }} | {% endif %}punkfairie.net</title>
 
-    <!--suppress HtmlUnknownTarget -->
-    <link rel="stylesheet" href="/style/style.css">
+  <!--suppress HtmlUnknownTarget -->
+  <link rel="stylesheet" href="/style/style.css">
 
-    <!-- Bunny Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=bungee-shade:400|imprima:400" rel="stylesheet"/>
+  <!-- Bunny Fonts -->
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=bungee-shade:400|imprima:400"
+    rel="stylesheet"/>
+
+  <!-- NeoSSG webwring -->
+  <!--suppress JSUnresolvedLibraryURL -->
+  <link rel="stylesheet" href="https://neossg.neocities.org/onionring.css">
 </head>
 <body class="Site">
 
 <h1 class="Site-title">punkfairie.net</h1>
 
-<nav class="Site-nav Nav" x-data :style="$store['subNav'].open ? '--Site-nav-gridArea: Site-nav;' : ''">
-    {% include 'main-nav' %}
+<nav class="Site-nav Nav" x-data
+  :style="$store['subNav'].open ? '--Site-nav-gridArea: Site-nav;' : ''">
+  {% include 'main-nav' %}
 </nav>
 
-<nav class="Site-subNav Nav" x-data x-show="$store['subNav'].current === 'collections'" id="collections-submenu">
-    {% include 'collections-nav' %}
+<nav class="Site-subNav Nav" x-data
+  x-show="$store['subNav'].current === 'collections'" id="collections-submenu">
+  {% include 'collections-nav' %}
 </nav>
 
 <main class="Site-content">
-    {{ content }}
+  {{ content }}
 </main>
 
 <aside class="Site-info Info">
-    {% include 'site-info' %}
+  {% include 'site-info' %}
 </aside>
 
 <aside class="Site-social Social">
-    {% include 'site-social' %}
+  {% include 'site-social' %}
 </aside>
 
 <!--suppress HtmlUnknownTarget -->
