@@ -35,7 +35,16 @@ $neutral-50: rgb(250 250 250);
 $neutral-900: rgb(24 24 27);
 
 /* gradient */
-$gradient: linear-gradient(90deg, $red-400 0%, $orange-400 17%, $yellow-400 33%, $green-400 50%, $blue-400 67%, $purple-400 83%, $pink-400 100%);
+$gradient: linear-gradient(
+  90deg,
+  $red-400 0%,
+  $orange-400 17%,
+  $yellow-400 33%,
+  $green-400 50%,
+  $blue-400 67%,
+  $purple-400 83%,
+  $pink-400 100%
+);
 
 /* color iterator (mostly used for styleguide classes) */
 $colors: (
@@ -59,42 +68,37 @@ $colors: (
 );
 
 /* text color iterator */
-$text-colors: [
-  $red-600,
+$text-colors:
+  [ $red-600,
   $orange-600,
   $yellow-600,
   $green-600,
   $blue-600,
   $purple-600,
-  $pink-600
-];
+  $pink-600];
 
 /* bullet image iterator */
-//noinspection CssUnknownTarget
-$bullet-images-point-left: [
-  url('/style/assets/ha01-icon-arrow.gif'),
-  url('/style/assets/ha02-icon-arrow.gif'),
-  url('/style/assets/ha03-icon-arrow.gif'),
-  url('/style/assets/ha05-icon-arrow.gif'),
-  url('/style/assets/ha06-icon-arrow.gif'),
-  url('/style/assets/ha08-icon-arrow.gif'),
-  url('/style/assets/ha10-icon-arrow.gif')
-];
-//noinspection CssUnknownTarget
-$bullet-images-point-right: [
-  url('style/assets/hb01-icon-arrow.gif'),
-  url('style/assets/hb02-icon-arrow.gif'),
-  url('style/assets/hb03-icon-arrow.gif'),
-  url('style/assets/hb05-icon-arrow.gif'),
-  url('style/assets/hb06-icon-arrow.gif'),
-  url('style/assets/hb08-icon-arrow.gif'),
-  url('style/assets/hb10-icon-arrow.gif')
-];
+$bullet-images-point-left:
+  [ url("/style/assets/ha01-icon-arrow.gif"),
+  url("/style/assets/ha02-icon-arrow.gif"),
+  url("/style/assets/ha03-icon-arrow.gif"),
+  url("/style/assets/ha05-icon-arrow.gif"),
+  url("/style/assets/ha06-icon-arrow.gif"),
+  url("/style/assets/ha08-icon-arrow.gif"),
+  url("/style/assets/ha10-icon-arrow.gif")];
+$bullet-images-point-right:
+  [ url("style/assets/hb01-icon-arrow.gif"),
+  url("style/assets/hb02-icon-arrow.gif"),
+  url("style/assets/hb03-icon-arrow.gif"),
+  url("style/assets/hb05-icon-arrow.gif"),
+  url("style/assets/hb06-icon-arrow.gif"),
+  url("style/assets/hb08-icon-arrow.gif"),
+  url("style/assets/hb10-icon-arrow.gif")];
 
 /* typography */
-$fontFamily--display: 'Bungee Shade', display;
-$fontFamily--body: 'Imprima', handwriting;
-$letterSpacing: .6px;
+$fontFamily--display: "Bungee Shade", display;
+$fontFamily--body: "Imprima", handwriting;
+$letterSpacing: 0.6px;
 
 /**
  * Fluid type scale
@@ -102,11 +106,11 @@ $letterSpacing: .6px;
  */
 
 $fontSize-0: clamp(0.75rem, calc(0.71rem + 0.22vw), 0.88rem);
-$fontSize-1: clamp(0.90rem, calc(0.83rem + 0.34vw), 1.09rem);
-$fontSize-2: clamp(1.08rem, calc(0.98rem + 0.50vw), 1.37rem);
-$fontSize-3: clamp(1.30rem, calc(1.15rem + 0.72vw), 1.71rem);
+$fontSize-1: clamp(0.9rem, calc(0.83rem + 0.34vw), 1.09rem);
+$fontSize-2: clamp(1.08rem, calc(0.98rem + 0.5vw), 1.37rem);
+$fontSize-3: clamp(1.3rem, calc(1.15rem + 0.72vw), 1.71rem);
 $fontSize-4: clamp(1.56rem, calc(1.35rem + 1.01vw), 2.14rem);
-$fontSize-5: clamp(1.87rem, calc(1.59rem + 1.40vw), 2.67rem);
+$fontSize-5: clamp(1.87rem, calc(1.59rem + 1.4vw), 2.67rem);
 $fontSize-6: clamp(2.24rem, calc(1.86rem + 1.91vw), 3.34rem);
 
 /**
@@ -114,31 +118,31 @@ $fontSize-6: clamp(2.24rem, calc(1.86rem + 1.91vw), 3.34rem);
  * @link https://utopia.fyi/space/calculator?c=320,12,1.2,1240,14,1.25,6,0,&s=0.75|0.5|0.25|0.15,1.5|2|3|4|6|12|24,s-l&g=s,l,xl,12
  */
 
-$spacer-4xs: clamp(0.13rem, calc(0.13rem + 0.00vw), 0.13rem);
+$spacer-4xs: clamp(0.13rem, calc(0.13rem + 0vw), 0.13rem);
 $spacer-3xs: clamp(0.19rem, calc(0.17rem + 0.11vw), 0.25rem);
 $spacer-2xs: clamp(0.38rem, calc(0.35rem + 0.11vw), 0.44rem);
 $spacer-xs: clamp(0.56rem, calc(0.52rem + 0.22vw), 0.69rem);
 $spacer-s: clamp(0.75rem, calc(0.71rem + 0.22vw), 0.88rem);
 $spacer-m: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
-$spacer-l: clamp(1.50rem, calc(1.41rem + 0.43vw), 1.75rem);
+$spacer-l: clamp(1.5rem, calc(1.41rem + 0.43vw), 1.75rem);
 $spacer-xl: clamp(2.25rem, calc(2.12rem + 0.65vw), 2.63rem);
-$spacer-2xl: clamp(3.00rem, calc(2.83rem + 0.87vw), 3.50rem);
-$spacer-3xl: clamp(4.50rem, calc(4.24rem + 1.30vw), 5.25rem);
-$spacer-4xl: clamp(9.00rem, calc(8.48rem + 2.61vw), 10.50rem);
-$spacer-5xl: clamp(18.00rem, calc(16.96rem + 5.22vw), 21.00rem);
+$spacer-2xl: clamp(3rem, calc(2.83rem + 0.87vw), 3.5rem);
+$spacer-3xl: clamp(4.5rem, calc(4.24rem + 1.3vw), 5.25rem);
+$spacer-4xl: clamp(9rem, calc(8.48rem + 2.61vw), 10.5rem);
+$spacer-5xl: clamp(18rem, calc(16.96rem + 5.22vw), 21rem);
 
 /* One-up pairs */
 $spacer-4xs-3xs: clamp(0.13rem, calc(0.08rem + 0.22vw), 0.25rem);
-$spacer-3xs-2xs: clamp(0.19rem, calc(0.10rem + 0.43vw), 0.44rem);
+$spacer-3xs-2xs: clamp(0.19rem, calc(0.1rem + 0.43vw), 0.44rem);
 $spacer-2xs-xs: clamp(0.38rem, calc(0.27rem + 0.54vw), 0.69rem);
 $spacer-xs-s: clamp(0.56rem, calc(0.45rem + 0.54vw), 0.88rem);
 $spacer-s-m: clamp(0.75rem, calc(0.55rem + 0.98vw), 1.31rem);
 $spacer-m-l: clamp(1.13rem, calc(0.91rem + 1.09vw), 1.75rem);
-$spacer-l-xl: clamp(1.50rem, calc(1.11rem + 1.96vw), 2.63rem);
-$spacer-xl-2xl: clamp(2.25rem, calc(1.82rem + 2.17vw), 3.50rem);
-$spacer-2xl-3xl: clamp(3.00rem, calc(2.22rem + 3.91vw), 5.25rem);
-$spacer-3xl-4xl: clamp(4.50rem, calc(2.41rem + 10.43vw), 10.50rem);
-$spacer-4xl-5xl: clamp(9.00rem, calc(4.83rem + 20.87vw), 21.00rem);
+$spacer-l-xl: clamp(1.5rem, calc(1.11rem + 1.96vw), 2.63rem);
+$spacer-xl-2xl: clamp(2.25rem, calc(1.82rem + 2.17vw), 3.5rem);
+$spacer-2xl-3xl: clamp(3rem, calc(2.22rem + 3.91vw), 5.25rem);
+$spacer-3xl-4xl: clamp(4.5rem, calc(2.41rem + 10.43vw), 10.5rem);
+$spacer-4xl-5xl: clamp(9rem, calc(4.83rem + 20.87vw), 21rem);
 
 /* Custom pairs */
-$spacer-s-l: clamp(0.75rem, calc(0.40rem + 1.74vw), 1.75rem);
+$spacer-s-l: clamp(0.75rem, calc(0.4rem + 1.74vw), 1.75rem);

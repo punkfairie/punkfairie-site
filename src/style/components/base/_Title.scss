@@ -1,13 +1,14 @@
-@use '../../theme';
+@use "../../theme";
 
 @mixin Title($size) {
   font-weight: normal;
-  text-transform: uppercase;
   text-align: center;
+  text-transform: uppercase;
 
-  &::before, &::after {
+  &::before,
+  &::after {
     font-size: $size;
-    content: '🌈';
+    content: "🌈";
   }
 
   &::before {

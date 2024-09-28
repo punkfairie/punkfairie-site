@@ -1,5 +1,5 @@
-@use '../theme';
-@use '../mixins';
+@use "../theme";
+@use "../mixins";
 
 .StyleGuide-colors {
   display: flex;
@@ -26,7 +26,7 @@
       color: theme.$neutral-50;
     }
 
-    @if ($name == 'gradient') {
+    @if ($name == "gradient") {
       background-image: $color;
       width: 100%;
     } @else {
@@ -40,7 +40,9 @@
   flex-wrap: wrap;
 }
 
-.StyleGuide-italics, .StyleGuide-bold, .StyleGuide-links {
+.StyleGuide-italics,
+.StyleGuide-bold,
+.StyleGuide-links {
   flex-grow: 1;
   text-align: center;
 }
